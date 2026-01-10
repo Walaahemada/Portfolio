@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | walaa</title>
+    <link rel="icon" href="img/logo_icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <head>
+        <style>
+       *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+            font-family: "Inter",sans-serif;
+        }
+        :root{
+            --main_color:#0c9540;
+            --p_color:#8a8a8a;
+            --bg_color:#1b2c48;
+            --white_color:#fff;
+            --black_color:#152141;
+            --border_color:rgba(255,255,255,0.1);
+
+        }
+        body{
+            background: #152141f6;
+        }
+        .container{
+            width: 80%;
+            margin: auto;
+            max-width: 1500px;
+        }
+        section{
+            padding: 80px 0;
+        }
+        img{
+            width: 100%;
+        }
+        h1,h2,h3,h4,h5,h6{
+            color: var(--white_color);
+            font-family: "DM Sans" ,sans-serif;
+        }
+        span{
+            color: var(--main_color);
+        }
+        p{
+            color: var(--p_color);
+        }
+        .bg-lines span{
+            position: fixed;
+            top: 0;
+            z-index: -1;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            width: 1px;
+            -webkit-animation: left_Right 18s infinite;
+            animation: left_Right 18s infinite;
+        }
+        .bg-lines span:nth-child(1){
+            left: 10%;
+        }
+        .bg-lines span:nth-child(2){
+            left: 20%;
+        }
+        .bg-lines span:nth-child(3){
+            left: 30%;
+        }
+        .bg-lines span:nth-child(4){
+            left: 40%;
+        }
+        .bg-lines span:nth-child(5){
+            left: 50%;
+        }
+        .bg-lines span:nth-child(6){
+            left: 60%;
+        }
+        .bg-lines span:nth-child(7){
+            left: 70%;
+        }
+        .bg-lines span:nth-child(8){
+            left: 80%;
+        }
+        .bg-lines span:nth-child(9){
+            left: 90%;
+        }
+        @keyframes left_Right{
+            0%{
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            50%{
+                -webkit-transform: translateX(-100px);
+                transform: translateX(-100px);
+            }
+            100%{
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+       .top_section{
+        text-align: center;
+        margin-bottom: 100px;
+       }
+       .top_section h2{
+        font-size: 30px;
+       }
+    
+        /*Header*/
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: var(--black_color);
+            border-bottom: 1px solid #56565697;
+            transition: 0.3s;
+            z-index: 100;
+        }
+        header nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+        
+        header nav .links{
+            display: flex;
+            gap: 40px;
+        }
+        header nav .links a{
+            color: var(--white_color);
+            text-transform:capitalize ;
+            font-size: 18px;
+
+        }
+        header nav .links a:hover{
+            color: var(--main_color); 
+            transform:scale(1.1) ;
+            transition: 0.3s;
+        }
+        header nav .icons{
+            display: flex;
+            gap: 30px;
+        }
+        header nav .icons a{
+            color: var(--main_color);
+            font-size: 28px; 
+            transition:0.3s ;
+        }
+        header nav .icons a:hover{
+            scale: 1.4;
+           
+        }
+        .logo{
+            font-size: 30px;
+            color: white;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+        .logo:hover{
+            color: var(--main_color);
+            transform: scale(1.1);
+        }
+        
+        /*start hero*/
+        .hero{
+           padding-top: 100px; 
+           height: 100vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        .hero .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hero .div_text{
+           width: 50%; 
+        }
+        .hero .div_text h4{
+           color: var(--p_color);
+           font-size: 35px;
+           margin-bottom: 15px;
+        }
+        .hero .div_text h1{
+           font-size: 70px;
+        }
+        .hero .div_text h2{
+           font-size: 70px;
+           font-weight: normal;
+           line-height: 0.9;
+        }
+        .hero .div_text p{
+            margin: 30px 0;
+           font-size: 18px;
+           width: 80%;
+           line-height: 1.7;
+        }
+        .hero .btn{
+           font-size: 20px;
+           padding:18px 50px ;
+        }
+        .hero .div_img{
+           width: 40%; 
+           position: relative;
+           border-radius:0 0 600px 600px ;
+           overflow: hidden;
+    
+        }
+        .person{
+           margin-bottom: -4px;
+        }
+        .hero .div_img .bg_img{
+    
+           position: absolute; 
+           bottom: 0;
+           left: 0;
+           z-index: -1;
+           
+        }
+        /*about*/
+        .about .container{
+            background-color: var(--black_color);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 5px;
+            padding:50px ;
+        }
+        .about .div_text{
+            width: 50%;
+        }
+        .about .div_text h5{
+            color: var(--p_color);
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+        .about .div_text h2{
+            margin: 25px 0 5px;
+            font-size: 45px;
+        }
+        .about .div_text h4{
+            margin-bottom: 20px;
+            font-size: 30px;
+    
+        }
+        .about .div_text p{
+            line-height: 1.8;
+        }
+        .about .div_text ul{
+            display: flex;
+            color: var(--white_color);
+            margin:30px 0 20px ;
+            flex-wrap: wrap;
+    
+        }
+        .about .div_text ul li{
+            width: 45%;
+            font-weight: bold;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .about .div_text ul li i{
+            color: var(--main_color);
+        }
+        .about .div_img{
+            width: 35%;
+        }
+        /*end about*/
+        
+        /*services*/
+        .services .boxs{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .services .boxs .box{
+            width: 30%;
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 10px;
+            border:1px solid var(--border_color) ;
+            transition:0.3s ease-in-out ;
+        }
+        .services .boxs .box i{
+            color: var(--main_color);
+            font-size: 70px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+        .services .boxs .box h3{
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .services .boxs .box p{
+            font-size: 14px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+        .services .boxs .box:hover{
+            border-color: var(--main_color);
+        }
+        .services .boxs .box i:hover{
+           scale: 1.3; 
+        }
+        /*end services*/
+        /*project*/
+        .projects .project_box{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+        .projects .project_box img{
+            width: 45%;
+        }
+        .projects .project_box .text{
+            margin-left: 100px;
+            width: calc(50%-100px);
+        }
+        .projects .project_box .text h4{
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .projects .project_box .text h3 a{
+            font-size: 40px;
+            color: var(--white_color);
+    
+        }
+        .projects .project_box .text h3 a:hover{
+           
+            color: var(--main_color);
+    
+        }
+        .projects .project_box .text p{
+            line-height:1.8 ;
+            margin: 30px 0 50px;
+    
+        }
+        .projects .project_box .text .link{
+            display: block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--border_color);
+            color: var(--black_color);
+            font-size: 20px;
+            background: var(--main_color);
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            rotate: 45deg;
+            transition:0.3s ;
+    
+        }
+        .projects .project_box .text .link:hover{
+            scale: 1.2;
+        }
+        .projects .project_box.b{
+            flex-direction:row-reverse ;
+        }
+        /*end*/
+        /*contact*/
+
+        .contact .container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .contact .top_section{
+            margin-bottom: 100px;
+
+        }
+        .contact .s_contact{
+            width: 30%;
+        }
+        .contact .s_contact h2{
+            color: var(--white_color);
+            margin-bottom: 40px;
+        }
+        .contact .s_contact .links{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact .s_contact .links a{
+            color: var(--white_color);
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            left: 0;
+            transition: 0.3s;
+        }
+        .contact .s_contact .links a i{
+            color: var(--bg_color);
+            margin-right:5px ;
+            width: 45px;
+            height: 45px;
+            background: var(--main_color);
+            text-align: center;
+            line-height: 45px;
+            border-radius: 5px;
+
+        }
+        .contact .s_contact .links a:hover{
+           left: 15px;  
+        }
+        
+        .contact form{
+            width: 60%;
+            text-align: center;
+        }
+
+        .contact form .inpts_form{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .contact form .inpts_form input,
+        .contact form .inpts_form textarea{
+            border-radius: 5px;
+            padding: 20px;
+            outline:none ;
+            background-color: var(--bg_color);
+            color: white;
+            margin-bottom: 30px;
+            border: 1px solid var(--border_color);
+            transition: 0.3s;
+        }
+        .contact form .inpts_form input{
+            width: 48%;
+        }
+        .contact form .inpts_form textarea{
+            width: 100%;
+        }
+        .contact form .inpts_form input:focus,
+        .contact form .inpts_form textarea:focus{
+           border-color: var(--main_color);
+        }
+        .contact .btn{
+            outline: none;
+            padding: 15px 35px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .contact .btn:hover{
+            scale: 1.1;
+        }
+
+        /*end*/
+        /*responsive*/
+        
+        header .links .logo,.close,.icon{
+            display: none;
+        }
+        @media(max-width:1250px){
+            .container{
+                width: 90%;
+            }
+
+            
+        }
+        @media(max-width:1000px){
+           header nav .links{
+            position: fixed;
+            top: 0;
+            flex-direction: column;
+            width: 400px;
+            background: var(--black_color);
+            left: -400px;
+            padding: 50px 0;
+            height: 100%;
+            border-right: 1px solid var(--border_color);
+            text-align: center;
+            transition: 0.3s ease-in-out;
+           }
+           header nav .links.active{
+            left: 0;
+            }
+           .close{
+            display: block;
+            font-size: 20px;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+        header .links .logo{
+            display: block;
+            font-size: 25px;
+        }
+        .icon{
+            display: block;
+            font-size: 28px;
+            color: var(--main_color);
+        }
+            
+        }
+        /*homeeeee*/
+        @media(max-width:1000px){
+            .hero .div_text h4{
+                font-size: 25px;
+            }
+            .hero .div_text h1{
+                font-size: 55px;
+            }
+            .hero .div_text h2{
+                font-size: 55px;
+            }
+            .hero .div_text p{
+                font-size: 16px;
+                margin: 30px auto;
+            }
+            .hero .btn{
+                font-size: 18px;
+                padding: 16px 40px;
+            }
+            .hero .container{
+                flex-direction: column;
+            }
+            .hero .div_text{
+                width: 100%;
+                margin-top: 50px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .hero .btns{
+              justify-content: center;
+            }
+            .hero{
+                height: auto;
+            }
+            .about .container{
+                flex-direction: column;
+            }
+            .about .div_text{
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            .about .div_img{
+                width: 45%; 
+                }
+            
+
+
+            .services .boxs .box{
+                width: 47%;
+                margin-bottom: 30px;
+            }
+            .projects .project_box .text h3 a{
+                font-size: 25px;
+            }
+            .projects .project_box .text h4{
+                font-size: 16px;
+            }
+            .projects .project_box .text p{
+                font-size: 14px;
+            }
+            .projects .project_box .text {
+                width:calc(50% - 50px) ;
+                margin-left: 50px;
+            }
+            .contact .container{
+                flex-direction: column;
+            }
+            .contact .s_contact {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            .contact .s_contact .links{
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .contact .s_contact .links a{
+                width: 50%;
+                font-size: 16px;
+            }
+            .contact .s_contact .links a i{
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+            }
+            .contact form{
+                width: 80%;
+                margin: 0 auto;
+            }
+            .contact .btn{
+                font-size: 16px;
+                padding: 13px;
+            }
+
+
+            }
+
+        
+        @media(max-width:500px){
+            .btn{
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+            header nav .icons a{
+                font-size: 20px;
+            }
+            header nav .icons{
+                gap: 15px;
+                align-items: center;
+            }
+            header nav .logo img{
+                width: 150px;
+            }
+            header nav .links{
+                width:100% ;
+                left: -100%;
+            }
+            .hero .div_text h4{
+                font-size: 22px;
+            }
+            .hero .div_text h1{
+                font-size: 45px;
+            }
+            .hero .div_text h2{
+                font-size: 45px;
+            }
+            .hero .div_text p{
+                font-size: 14px;
+                margin: 25px auto;
+                width: 100%;
+            }
+            .hero .btn{
+                font-size: 16px;
+                padding: 14px 30px;
+            }
+            .hero .div_img{
+                width:75% ;
+            }
+
+
+
+            .about .div_text h2{
+                font-size: 30px;
+            }
+            .about .div_text h4{
+                font-size: 20px;
+            }
+            .about .div_text p{
+                font-size: 14px;
+            }
+            .about .div_text ul li{
+                font-size: 14px;
+                width: 100%;
+            }
+            .about .div_img{
+                width: 85%;
+            }
+            .top_section h2{
+                font-size: 22px;
+            }
+            .services .boxs .box{
+                width:100% ;
+            }
+            .services .boxs .box i{
+                font-size:55px ;
+
+            }
+            .projects .project_box,.projects .project_box.project_box.b{
+                flex-direction: column;
+            }
+            .projects .project_box img{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .projects .project_box .text{
+                width: 100%;
+                margin-left: 0;
+            }
+            .projects .project_box .text p{
+                width: 100%;
+                margin:20px 0 30px;
+            }
+            .projects .project_box .text h3 a{
+                font-size: 23px;
+            }
+            .contact .s_contact .links{
+                flex-direction: column;
+            }
+            .contact .s_contact .links a{
+                width:100%;
+            }
+            .projects{
+                padding-bottom: 40px;
+            }
+            .contact{
+                padding-top: 0;
+            }
+            .contact .top_section{
+               margin-bottom: 60px; 
+            }
+            .contact form{
+                width: 100%;
+
+            }
+            .contact form .inpts_form input{
+                width: 100%;
+                padding: 15px 20px;
+                margin-bottom: 20px;
+
+            }
+        
+        }
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*btns*/
+        .btns{
+           display:flex;
+           align-items: center;
+           gap: 20px;
+        }
+        .btn{
+          background: var(--main_color);
+          padding: 14px 30px;
+          border-radius: 10px;
+          font-weight: 600;
+          text-transform: capitalize;
+          color: var(--black_color);
+          transition: 0.3s;
+        }
+        .btn:hover{
+            scale: 1.1;
+        }
+        .btn_no_bg{
+            color: var(--white_color);
+            text-transform: capitalize;
+            text-decoration: underline;
+            transition: 0.3s;
+        }
+        .btn_no_bg:hover{
+            color: var(--main_color)
+        }
+
+    </style>
+        
+           </head>
+          <body>
+    
+    
+
+
+    
+
+
+    <div class="bg-lines">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+  <header>
+    <nav class="container">
+        <a href="#" class="logo"><span>Wa</span>laa</a>
+        <div class="links" id="links">
+            
+            <span class="close" onclick="open_close()"><i class="fa-solid fa-xmark"></i></span>
+            
+            <a href="#" class="logo"><span>Wa</span>laa</a>
+            
+            <a class="active"href="#home" >Home</a>
+            <a href="#about" >About</a>
+            <a href="#services">Services</a>
+            <a href="#projects" >Projects</a>
+            <a href="#contact" >Contact</a>
+        </div>
+        <div class="icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <spspan class="icon" onclick="open_close()"><i class="fa-solid fa-bars"></i></spspan>
+        </div>
+    </nav>
+  </header>
+
+  <div class="hero" id="home">
+    <div class="container">
+      <div class="div_text">
+        <h4>Hello, I'm</h4>
+        <h1><span>Walaa H.</span></h1>
+        <h2>Front-End Developer</h2>
+        <p>
+          I’m a passionate Web Developer who learns quickly and adapts to new challenges.
+          I enjoy turning ideas into practical, user-friendly digital products and continuously
+          improving my skills through real projects.
+        </p>
+        <div class="btns">
+          <a href="#" class="btn">Hire Me</a>
+          <!-- <a href="Portfolio New 1/cv/Hiba_Frontend_Developer_CV.pdf" download class="btn_no_bg">Download Resume</a> -->
+        </div>
+      </div>
+  
+      <div class="div_img">
+        <img class="person" src="Portfolio New 1/img/home.png" alt="">
+        <img class="bg_img" src="Portfolio New 1/img/bg_img_home .png" alt="">
+      </div>
+    </div>
+  </div>
+  
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="div_text">
+        <h5>About Me</h5>
+        <h2><span>I'm a Front-End Developer</span></h2>
+        <h4>Front-End Web Application Developer</h4>
+  
+        <p>
+          I am a Front-End Developer with practical experience in React and UI/UX design.
+          I have successfully worked on multiple training projects, including web applications,
+          UX/UI designs, and interactive tools. I learn quickly and enjoy taking on new challenges,
+          turning requirements into functional and polished digital products.
+        </p>
+  
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Front-End Development</li>
+          <li><i class="fa-solid fa-check"></i> UI / UX Design</li>
+          <li><i class="fa-solid fa-check"></i> React Applications</li>
+          <li><i class="fa-solid fa-check"></i> Web Projects</li>
+        </ul>
+  
+        <!-- <a href="Portfolio New 1/cv/Hiba_Frontend_Developer_CV.pdf" download class="btn">
+          Download CV
+        </a> -->
+      </div>
+  
+      <div class="div_img">
+        <img src="Portfolio New 1/img/about.jpg" alt="About Me">
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="top_section">
+        <h2>Our <span>Services</span></h2>
+      </div>
+  
+      <div class="boxs">
+        <div class="box">
+          <i class="fa-solid fa-pen-ruler"></i>
+          <h3>Web Development & Design</h3>
+          <p>
+            I create responsive and user-friendly websites using modern technologies like React,
+            ensuring intuitive navigation and appealing design that enhances user experience.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+  
+        <div class="box">
+          <i class="fa-solid fa-rocket"></i>
+          <h3>Fast & Optimized Performance</h3>
+          <p>
+            I focus on developing fast-loading web applications with clean architecture
+            and optimized code to deliver smooth performance across all devices.
+        
+        </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+  
+        <div class="box">
+          <i class="fa-solid fa-code"></i>
+          <h3>Clean & Maintainable Code</h3>
+          <p>
+            I write clean, organized, and maintainable code, following best practices,
+            making it easy to scale projects and collaborate with other developers.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="top_section">
+        <h2>Explore my Popular <span>Projects</span></h2>
+      </div>
+  
+      <!-- Project: Gaza Student–Company Connect -->
+<div class="project_box">
+    <img src="Portfolio New 1/img/project1.png" alt="Gaza Student–Company Connect">
+    <div class="text">
+      <h4><span>Web Development</span></h4>
+      <h3><a href="#">Platform connecting Gaza students with companies</a></h3>
+      <p>
+        Developed a React-based web platform connecting university students in Gaza
+        with local and international companies offering internship opportunities.
+        Students can create profiles, browse available internships, and apply easily,
+        while companies can post opportunities and communicate directly with candidates.
+      </p>
+      <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </div>
+  
+  
+      <!-- Project 2: UX/UI Design -->
+      <div class="project_box b">
+        <img src="Portfolio New 1/img/project2.png" alt="UX/UI Design">
+        <div class="text">
+          <h4><span>UX/UI Design</span></h4>
+          <h3><a href="#">Website & Mobile App for Training Center</a></h3>
+          <p>
+            UX/UI design for a training center platform (web & mobile), focusing on course discovery, booking, progress tracking, and smart learning features based on user research.
+          </p>
+          <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+  
+      <!-- Project 3: UX/UI Design -->
+      <div class="project_box">
+        <img src="Portfolio New 1/img/project3.png" alt="UX/UI Design">
+        <div class="text">
+          <h4><span>UX/UI Design</span></h4>
+          <h3><a href="#">Mobile App Prototype</a></h3>
+          <p>
+            Developed a prototype for a mobile application focusing on user-friendly interactions
+            and clean visual design using Figma.
+          </p>
+          <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+  
+      <!-- Project 4: Special Project -->
+      <div class="project_box b">
+        <img src="Portfolio New 1/img/project4.png" alt="Special Web Project">
+        <div class="text">
+          <h4><span>Web Development & Design</span></h4>
+          <h3><a href="#">Palestine Awareness Web Page</a></h3>
+          <p>
+            Created a web page highlighting Palestinian culture and history.
+            Combined interactive elements with visual storytelling to educate and engage users.
+          </p>
+          <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <section class="contact" id="contact">
+    <div class="top_section">
+        <h2>Contact<span>Me</span></h2>
+    </div>
+    <div class="container">
+        <div class="s_contact">
+            <h2>Follow Me</h2>
+            <div class="links">
+                <a href="mailto:walahemada@gmail.com"><i class="fa-solid fa-envelope"></i> walahemada@gmail.com</a>
+                <a href="tel:+0598548404"><i class="fa-solid fa-phone"></i> 0598548404</a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i> facebook</a>
+                <a href="https://www.linkedin.com/in/walaa-hemada/" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin</a>
+                <a href="#"><i class="fa-brands fa-instagram"></i> instagram</a>
+            </div>
+        </div>
+        <form action="">
+            <div class="inpts_form">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Mobile Number">
+                <input type="text" placeholder="Subject">
+                <textarea name="" id="" rows="10" placeholder="Your Messsge"></textarea>
+            </div>
+            <button class="btn">Send Messsge</button>
+        </form>
+    </div>
+  </section>
+  <script src="main.js"></script>
+</body>
+</html>
