@@ -5,6 +5,9 @@
     <title>Portfolio | walaa</title>
     <link rel="icon" href="img/logo_icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  
+    
     <head>
         <style>
        *{
@@ -801,7 +804,7 @@
         </div>
         <div class="icons">
             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/walaa-hemada/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <spspan class="icon" onclick="open_close()"><i class="fa-solid fa-bars"></i></spspan>
         </div>
@@ -927,7 +930,7 @@
         Students can create profiles, browse available internships, and apply easily,
         while companies can post opportunities and communicate directly with candidates.
       </p>
-      <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+      <a href="https://my-training-project-tan.vercel.app/" target="_blank" class="link"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
   </div>
   
@@ -941,7 +944,7 @@
           <p>
             UX/UI design for a training center platform (web & mobile), focusing on course discovery, booking, progress tracking, and smart learning features based on user research.
           </p>
-          <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+          <a href="https://www.figma.com/design/1qTzZQCBFj3wnQfoTtsdpP/Untitled?node-id=0-1&t=LAsOJ61QTTemZxx7-1" target="_blank" class="link"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
       </div>
   
@@ -955,7 +958,7 @@
             Developed a prototype for a mobile application focusing on user-friendly interactions
             and clean visual design using Figma.
           </p>
-          <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+          <a href="https://www.figma.com/design/eRYWv1lVFKDVwkmTFcPXq7/Untitled?t=ma6oy1I1EatYpv7L-1" target="_blank" class="link"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
       </div>
   
@@ -969,7 +972,7 @@
             Created a web page highlighting Palestinian culture and history.
             Combined interactive elements with visual storytelling to educate and engage users.
           </p>
-          <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+          <a href="https://life-window-for-palestine.vercel.app/" target="_blank" class="link"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
       </div>
   
@@ -992,18 +995,19 @@
                 <a href="#"><i class="fa-brands fa-instagram"></i> instagram</a>
             </div>
         </div>
-        <form action="">
+        <form id="contactForm" action="#" method="post">
             <div class="inpts_form">
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Mobile Number">
-                <input type="text" placeholder="Subject">
-                <textarea name="" id="" rows="10" placeholder="Your Messsge"></textarea>
+                <input type="text" name="full_name" placeholder="Full Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="mobile" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" rows="10" placeholder="Your Message"></textarea>                
             </div>
-            <button class="btn">Send Messsge</button>
+            <button  type="submit" class="btn">Send Messsge</button>
         </form>
     </div>
   </section>
   <script src="main.js"></script>
+  <script src="contact.js"></script>
 </body>
 </html>
