@@ -8,7 +8,7 @@ const supabaseClient = window.supabase.createClient(
 
 const form = document.getElementById("contactForm");
 
-// نضيف div للرسالة داخل الصفحة
+// div للرسالة
 const msgBox = document.createElement("div");
 msgBox.id = "formMessage";
 msgBox.style.marginTop = "10px";
@@ -17,8 +17,20 @@ form.appendChild(msgBox);
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // Disable button أثناء الإرسال
   const submitBtn = form.querySelector("button[type='submit']");
+
+  const full_name = form.querySelector("input[name='full_name']").value.trim();
+  const email = form.querySelector("input[name='email']").value.trim();
+  const message = form.querySelector("textarea[name='message']").value.trim();
+
+  // ✅ التحقق من الحقول الأساسية
+  if (!full_name || !email || !message) {
+    msgBox.style.color = "red";
+    msgBox.textContent = "❌ Please fill in your name, email, and message.";
+    return; // ما يعمل إرسال
+  }
+
+  // Disable button أثناء الإرسال
   submitBtn.disabled = true;
   submitBtn.textContent = "Sending...";
 
@@ -31,11 +43,11 @@ form.addEventListener("submit", async (e) => {
       .from("messages")
       .insert([
         {
-          full_name: formData.get("full_name"),
-          email: formData.get("email"),
-          mobile: formData.get("mobile"),
-          subject: formData.get("subject"),
-          message: formData.get("message"),
+          full_name: full_name,
+          email: email,
+          mobile: formData.get("mobile") || "",
+          subject: formData.get("subject") || "",
+          message: message,
         },
       ]);
 
@@ -53,10 +65,7 @@ form.addEventListener("submit", async (e) => {
     msgBox.textContent = "❌ Unexpected error occurred!";
     console.error(err);
   } finally {
-    // إعادة تفعيل الزر بعد العملية
     submitBtn.disabled = false;
     submitBtn.textContent = "Send Message";
   }
 });
-
-
