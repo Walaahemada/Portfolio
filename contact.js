@@ -8,28 +8,55 @@ const supabaseClient = window.supabase.createClient(
 
 const form = document.getElementById("contactForm");
 
+// نضيف div للرسالة داخل الصفحة
+const msgBox = document.createElement("div");
+msgBox.id = "formMessage";
+msgBox.style.marginTop = "10px";
+form.appendChild(msgBox);
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  // Disable button أثناء الإرسال
+  const submitBtn = form.querySelector("button[type='submit']");
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+
+  msgBox.textContent = ""; // مسح الرسالة القديمة
+
   const formData = new FormData(form);
 
-  const { error } = await supabaseClient
-    .from("messages")
-    .insert([
-      {
-        full_name: formData.get("full_name"),
-        email: formData.get("email"),
-        mobile: formData.get("mobile"),
-        subject: formData.get("subject"),
-        message: formData.get("message"),
-      },
-    ]);
+  try {
+    const { error } = await supabaseClient
+      .from("messages")
+      .insert([
+        {
+          full_name: formData.get("full_name"),
+          email: formData.get("email"),
+          mobile: formData.get("mobile"),
+          subject: formData.get("subject"),
+          message: formData.get("message"),
+        },
+      ]);
 
-  if (error) {
-    console.error(error);
-    alert("❌ Error");
-  } else {
-    alert("✅ Sent");
-    form.reset();
+    if (error) {
+      msgBox.style.color = "red";
+      msgBox.textContent = "❌ Something went wrong. Please try again.";
+      console.error(error);
+    } else {
+      msgBox.style.color = "green";
+      msgBox.textContent = "✅ Your message has been sent successfully!";
+      form.reset();
+    }
+  } catch (err) {
+    msgBox.style.color = "red";
+    msgBox.textContent = "❌ Unexpected error occurred!";
+    console.error(err);
+  } finally {
+    // إعادة تفعيل الزر بعد العملية
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Send Message";
   }
 });
+
+
